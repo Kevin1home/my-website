@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: simple-backend
+    env: java
+    plan: free
+    buildCommand: ./mvnw clean install
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: (later with Render DB)
+      - key: SPRING_DATASOURCE_USERNAME
+        value: (later)
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: (later)
